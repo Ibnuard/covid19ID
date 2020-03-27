@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Covid19 ID</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_guide">Guide</string>
+    <string name="nav_forum">Forum</string>
+    <string name="nav_about">About</string>
+</resources>

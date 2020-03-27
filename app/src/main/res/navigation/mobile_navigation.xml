@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigate_home">
+
+    <fragment
+        android:id="@+id/navigate_home"
+        android:name="com.ibnuputra.covid19id.fragment.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/home_fragment" />
+    <fragment
+        android:id="@+id/navigate_guide"
+        android:name="com.ibnuputra.covid19id.fragment.GuideFragment"
+        android:label="Guide"
+        tools:layout="@layout/guide_fragment" />
+
+    <fragment
+        android:id="@+id/navigate_forum"
+        android:name="com.ibnuputra.covid19id.fragment.ForumFragment"
+        android:label="Forum"
+        tools:layout="@layout/forum_fragment" />
+
+    <fragment
+        android:id="@+id/navigate_about"
+        android:name="com.ibnuputra.covid19id.fragment.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/about_fragment" />
+</navigation>
