@@ -11,10 +11,10 @@
         android:label="Home"
         tools:layout="@layout/home_fragment" />
     <fragment
-        android:id="@+id/navigate_guide"
-        android:name="com.ibnuputra.covid19id.fragment.GuideFragment"
-        android:label="Guide"
-        tools:layout="@layout/guide_fragment" />
+        android:id="@+id/navigate_news"
+        android:name="com.ibnuputra.covid19id.fragment.NewsFragment"
+        android:label="News"
+        tools:layout="@layout/news_fragment" />
 
     <fragment
         android:id="@+id/navigate_forum"
