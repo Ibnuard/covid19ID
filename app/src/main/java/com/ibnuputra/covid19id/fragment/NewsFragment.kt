@@ -13,7 +13,6 @@ import com.ibnuputra.covid19id.R
 import com.ibnuputra.covid19id.adapter.NewsAdapter
 import com.ibnuputra.covid19id.model.NewsResponse
 import com.ibnuputra.covid19id.service.ApiNews
-import kotlinx.android.synthetic.main.news_fragment.*
 import retrofit2.Call
 import retrofit2.Response
 import com.ibnuputra.covid19id.model.NewsModel as NewsModel1
@@ -48,7 +47,7 @@ class NewsFragment : Fragment() {
                     recyclerView.visibility = View.GONE
                     loadText.visibility = View.VISIBLE
                 }
-                recyclerView.adapter = NewsAdapter(newsData)
+                recyclerView.adapter = NewsAdapter(newsData, context!!)
             }
 
         })

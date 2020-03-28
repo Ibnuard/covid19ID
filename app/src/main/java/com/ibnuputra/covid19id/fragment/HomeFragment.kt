@@ -1,14 +1,17 @@
 package com.ibnuputra.covid19id.fragment
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import com.github.marlonlom.utilities.timeago.TimeAgo
-import com.github.marlonlom.utilities.timeago.TimeAgoMessages
+import com.ibnuputra.covid19id.GuideView
 import com.ibnuputra.covid19id.R
 import com.ibnuputra.covid19id.model.CoronaResponse
 import com.ibnuputra.covid19id.service.ApiMain
@@ -28,8 +31,12 @@ class HomeFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.home_fragment, container, false)
         pieChart = view.findViewById(R.id.slimChart)
+        val guideBtn: CardView = view.findViewById(R.id.guideButton)
 
-
+        guideBtn.setOnClickListener {
+            val intent = Intent(context, GuideView::class.java)
+            context?.startActivity(intent)
+        }
 
         ApiMain().services.getStats().enqueue(object :
             retrofit2.Callback<List<CoronaResponse>> {
@@ -37,6 +44,7 @@ class HomeFragment : Fragment() {
                 Toast.makeText(context, "GAGAL $t", Toast.LENGTH_SHORT).show()
             }
 
+            @SuppressLint("SetTextI18n")
             override fun onResponse(
                 call: Call<List<CoronaResponse>>,
                 response: Response<List<CoronaResponse>>
@@ -44,10 +52,10 @@ class HomeFragment : Fragment() {
                 val data = response.body()
                 data?.map {
                     Log.d("tag", "datanya ${it.deaths}")
-                    var death = it.deaths
-                    var totalCase = it.confirmed
-                    var activeCase = it.active
-                    var recovered = it.recovered
+                    val death = it.deaths
+                    val totalCase = it.confirmed
+                    val activeCase = it.active
+                    val recovered = it.recovered
                     setData(death, totalCase, activeCase, recovered)
 
                     tvActive.text = activeCase.toString()
@@ -63,9 +71,9 @@ class HomeFragment : Fragment() {
     }
 
     private fun setData(death: Int?, totalCase: Int?, active: Int?, recovered: Int?) {
-        var statDeath = (death!!.toFloat()/totalCase!!.toFloat())*100
-        var statRecovered = (recovered!!.toFloat()/totalCase!!.toFloat())*100
-        var statActive = (active!!.toFloat()/totalCase!!.toFloat())*100
+        val statDeath = (death!!.toFloat()/totalCase!!.toFloat())*100
+        val statRecovered = (recovered!!.toFloat()/totalCase.toFloat())*100
+        val statActive = (active!!.toFloat()/totalCase.toFloat())*100
 
 
 

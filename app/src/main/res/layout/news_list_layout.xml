@@ -5,6 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <androidx.cardview.widget.CardView
+        android:id="@+id/newsHolder"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
@@ -13,7 +16,7 @@
         app:cardCornerRadius="10dp">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="196dp"
+            android:layout_height="156dp"
             android:orientation="vertical">
             <ImageView
                 android:id="@+id/thumbnail"
@@ -24,7 +27,7 @@
             <RelativeLayout
                 android:layout_alignParentBottom="true"
                 android:layout_width="match_parent"
-                android:layout_height="72dp"
+                android:layout_height="62dp"
                 android:orientation="vertical">
                 <ImageView
                     android:layout_alignParentBottom="true"
@@ -33,6 +36,7 @@
                     android:alpha="0.5"
                     android:src="@drawable/news_placeholder"/>
                 <LinearLayout
+                    android:layout_centerInParent="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -43,7 +47,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Ini judul berita"
-                        android:textSize="14sp"
+                        android:fontFamily="@font/regularnunito"
+                        android:textSize="12sp"
                         android:textStyle="bold"
                         android:textColor="@color/colorWhite"/>
                 </LinearLayout>

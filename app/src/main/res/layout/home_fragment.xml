@@ -26,6 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hai, Username"
+            android:fontFamily="@font/regularnunito"
             android:paddingHorizontal="14dp"
             android:layout_centerInParent="true"
             android:textColor="@color/colorWhite"
@@ -85,6 +86,7 @@
                             android:text="Total Kasus"
                             android:textStyle="bold"
                             android:textSize="12sp"
+                            android:fontFamily="@font/regularnunito"
                             android:layout_marginHorizontal="8dp"
                             android:textColor="@color/colorBlue"/>
                     </LinearLayout>
@@ -104,6 +106,7 @@
                             android:text="Sedang Ditangani"
                             android:textStyle="bold"
                             android:textSize="12sp"
+                            android:fontFamily="@font/regularnunito"
                             android:layout_marginHorizontal="8dp"
                             android:textColor="@color/colorOrange"/>
                     </LinearLayout>
@@ -128,6 +131,7 @@
                             android:text="Pasien Sembuh"
                             android:textStyle="bold"
                             android:textSize="12sp"
+                            android:fontFamily="@font/regularnunito"
                             android:layout_marginHorizontal="8dp"
                             android:textColor="@color/colorGreen"/>
                     </LinearLayout>
@@ -147,6 +151,7 @@
                             android:text="Pasien Meninggal"
                             android:textStyle="bold"
                             android:textSize="12sp"
+                            android:fontFamily="@font/regularnunito"
                             android:layout_marginHorizontal="8dp"
                             android:textColor="@color/colorRed"/>
                     </LinearLayout>
@@ -177,8 +182,9 @@
                     android:layout_height="wrap_content"
                     android:text="Total Kasus"
                     android:paddingTop="4dp"
+                    android:fontFamily="@font/regularnunito"
                     android:paddingHorizontal="32dp"
-                    android:textSize="14sp"
+                    android:textSize="12sp"
                     android:textColor="@color/colorBlue"/>
                 <TextView
                     android:id="@+id/tvTotal"
@@ -186,9 +192,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0000"
+                    android:fontFamily="@font/regularnunito"
                     android:textStyle="bold"
                     android:layout_centerInParent="true"
-                    android:textSize="32sp"
+                    android:textSize="28sp"
                     android:textColor="@color/colorBlue"/>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -212,7 +219,8 @@
                     android:text="Sembuh"
                     android:paddingTop="4dp"
                     android:paddingHorizontal="32dp"
-                    android:textSize="14sp"
+                    android:fontFamily="@font/regularnunito"
+                    android:textSize="12sp"
                     android:textColor="@color/colorGreen"/>
                 <TextView
                     android:id="@+id/tvRecovered"
@@ -220,9 +228,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0000"
+                    android:fontFamily="@font/regularnunito"
                     android:textStyle="bold"
                     android:layout_centerInParent="true"
-                    android:textSize="32sp"
+                    android:textSize="28sp"
                     android:textColor="@color/colorGreen"/>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -251,8 +260,9 @@
                     android:layout_height="wrap_content"
                     android:text="Ditangani"
                     android:paddingTop="4dp"
+                    android:fontFamily="@font/regularnunito"
                     android:paddingHorizontal="32dp"
-                    android:textSize="14sp"
+                    android:textSize="12sp"
                     android:textColor="@color/colorOrange"/>
                 <TextView
                     android:id="@+id/tvActive"
@@ -261,8 +271,9 @@
                     android:layout_height="wrap_content"
                     android:text="0000"
                     android:textStyle="bold"
+                    android:fontFamily="@font/regularnunito"
                     android:layout_centerInParent="true"
-                    android:textSize="32sp"
+                    android:textSize="28sp"
                     android:textColor="@color/colorOrange"/>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -284,9 +295,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Meninggal"
+                    android:fontFamily="@font/regularnunito"
                     android:paddingTop="4dp"
                     android:paddingHorizontal="32dp"
-                    android:textSize="14sp"
+                    android:textSize="12sp"
                     android:textColor="@color/colorRed"/>
                 <TextView
                     android:id="@+id/tvDeath"
@@ -294,9 +306,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0000"
+                    android:fontFamily="@font/regularnunito"
                     android:textStyle="bold"
                     android:layout_centerInParent="true"
-                    android:textSize="32sp"
+                    android:textSize="28sp"
                     android:textColor="@color/colorRed"/>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -314,10 +327,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Terakhir di update : "
+            android:fontFamily="@font/regularnunito"
             android:textColor="@color/colorWhite"
-            android:textSize="14sp"/>
+            android:textSize="12sp"/>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
+        android:id="@+id/guideButton"
         android:layout_marginVertical="24dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -335,8 +350,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Panduan tentang Corona"
+                android:fontFamily="@font/regularnunito"
                 android:textColor="@color/colorOrange"
-                android:textSize="14sp"/>
+                android:textSize="12sp"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
