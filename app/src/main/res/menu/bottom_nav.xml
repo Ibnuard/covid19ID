@@ -11,9 +11,9 @@
         android:title="@string/nav_news" />
 
     <item
-        android:id="@id/navigate_forum"
-        android:icon="@drawable/ic_forum_nav"
-        android:title="@string/nav_forum" />
+        android:id="@id/navigate_test"
+        android:icon="@drawable/ic_test_nav"
+        android:title="@string/nav_test" />
 
     <item
         android:id="@id/navigate_about"

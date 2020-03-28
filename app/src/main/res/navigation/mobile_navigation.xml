@@ -17,10 +17,10 @@
         tools:layout="@layout/news_fragment" />
 
     <fragment
-        android:id="@+id/navigate_forum"
-        android:name="com.ibnuputra.covid19id.fragment.ForumFragment"
-        android:label="Forum"
-        tools:layout="@layout/forum_fragment" />
+        android:id="@+id/navigate_test"
+        android:name="com.ibnuputra.covid19id.fragment.TestFragment"
+        android:label="Test"
+        tools:layout="@layout/test_fragment" />
 
     <fragment
         android:id="@+id/navigate_about"

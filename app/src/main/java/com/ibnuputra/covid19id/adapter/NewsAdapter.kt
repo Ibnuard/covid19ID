@@ -15,8 +15,8 @@ import com.ibnuputra.covid19id.model.NewsResponse
 import com.squareup.picasso.Picasso
 
 class NewsAdapter(
-    private val news : List<NewsResponse>,
-    val context: Context
+    private val news : List<NewsResponse>?,
+    private val context: Context?
     ) : RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -24,19 +24,19 @@ class NewsAdapter(
         return  ViewHolder(view)
     }
 
-    override fun getItemCount() = news.size
+    override fun getItemCount() = news!!.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        var title = news[position].title
+        var title = news?.get(position)?.title
         if (title?.length!! > 100){
             title = title.substring(0,96)+"..."
         }
         holder.tvTitle.text = title
-        Picasso.get().load(news[position].thumbnail).into(holder.thumbnail)
+        Picasso.get().load(news?.get(position)?.thumbnail).into(holder.thumbnail)
         holder.holder.setOnClickListener {
             val intent = Intent(context, NewsViewActivity::class.java)
-            intent.putExtra("URL", news[position].url)
-            context.startActivity(intent)
+            intent.putExtra("URL", news?.get(position)?.url)
+            context?.startActivity(intent)
         }
     }
 

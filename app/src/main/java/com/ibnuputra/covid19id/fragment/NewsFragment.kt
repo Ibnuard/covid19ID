@@ -29,6 +29,7 @@ class NewsFragment : Fragment() {
         val loadText = view.findViewById(R.id.loadNews) as TextView
 
         recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.adapter = NewsAdapter(newsData, context!!)
 
         ApiNews().services.getNews().enqueue(object :
             retrofit2.Callback<NewsModel1> {
@@ -43,11 +44,12 @@ class NewsFragment : Fragment() {
                 if (newsData.isNotEmpty()){
                     recyclerView.visibility = View.VISIBLE
                     loadText.visibility = View.GONE
+                    recyclerView.adapter = NewsAdapter(newsData, context!!)
                 }else{
                     recyclerView.visibility = View.GONE
                     loadText.visibility = View.VISIBLE
                 }
-                recyclerView.adapter = NewsAdapter(newsData, context!!)
+
             }
 
         })

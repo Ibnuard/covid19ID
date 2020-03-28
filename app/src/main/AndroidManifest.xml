@@ -12,9 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GuideView"></activity>
-        <activity android:name=".NewsViewActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".GuideListActivity"></activity>
+        <activity
+            android:name=".TestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GuideView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NewsViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
