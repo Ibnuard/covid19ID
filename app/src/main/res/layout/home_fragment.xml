@@ -10,28 +10,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingVertical="24dp">
-        <androidx.cardview.widget.CardView
-            android:id="@+id/profilePh"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardElevation="0dp"
-            app:cardCornerRadius="16dp">
-            <ImageView
-                android:id="@+id/ivProfile"
-                android:layout_width="32dp"
-                android:layout_height="32dp"/>
-        </androidx.cardview.widget.CardView>
         <TextView
-            android:layout_toRightOf="@id/profilePh"
+            android:layout_alignParentLeft="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hai, Username"
+            android:text="Data Statistik"
             android:fontFamily="@font/regularnunito"
-            android:paddingHorizontal="14dp"
             android:layout_centerInParent="true"
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
-            android:textSize="14sp"/>
+            android:textSize="18sp"/>
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"

@@ -1,5 +1,6 @@
 package com.ibnuputra.covid19id
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -12,7 +13,7 @@ class TestActivity : AppCompatActivity() {
     private lateinit var btnNo: CardView
     private var questionData: MutableList<String> = ArrayList()
     private var posQuest: Int = 0
-    private var point:Int = 0
+    private var point = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,18 +30,16 @@ class TestActivity : AppCompatActivity() {
         questionData.add("Apakah tubuh Anda terasa lemas?")
         questionData.add("Apakah terasa pegal pada persendian?")
         questionData.add("Apakah Anda merasa Mual?")
-        questionData.add("Apakah Anda mengalami gejala diatas lebih dari 14 hari?")
 
         tvSoal.text = questionData[posQuest]
 
-
         btnYes.setOnClickListener {
             point += when (posQuest) {
-                1 -> {
-                    18
+                0 -> {
+                    25
                 }
-                2 -> {
-                    18
+                1 -> {
+                    25
                 }
                 else -> {
                     10
@@ -50,13 +49,20 @@ class TestActivity : AppCompatActivity() {
             getSoal()
         }
         btnNo.setOnClickListener {
-            posQuest+=1
+            posQuest += 1
             getSoal()
         }
     }
 
-    fun getSoal(){
-        Log.d("TAG", "PTS : $point")
-        tvSoal.text = questionData[posQuest]
+    private fun getSoal(){
+        Log.d("TAG", "PTS PER $posQuest : $point")
+        if (posQuest<questionData.size){
+            tvSoal.text = questionData[posQuest]
+        }else{
+            val intent = Intent(this, TestResultActivity::class.java)
+            intent.putExtra("PTS", point)
+            startActivity(intent)
+            finish()
+        }
     }
 }

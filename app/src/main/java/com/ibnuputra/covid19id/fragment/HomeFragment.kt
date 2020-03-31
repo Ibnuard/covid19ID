@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import com.github.marlonlom.utilities.timeago.TimeAgo
+import com.ibnuputra.covid19id.GuideListActivity
 import com.ibnuputra.covid19id.GuideView
 import com.ibnuputra.covid19id.R
 import com.ibnuputra.covid19id.model.CoronaResponse
@@ -34,7 +35,7 @@ class HomeFragment : Fragment() {
         val guideBtn: CardView = view.findViewById(R.id.guideButton)
 
         guideBtn.setOnClickListener {
-            val intent = Intent(context, GuideView::class.java)
+            val intent = Intent(context, GuideListActivity::class.java)
             context?.startActivity(intent)
         }
 
@@ -58,11 +59,11 @@ class HomeFragment : Fragment() {
                     val recovered = it.recovered
                     setData(death, totalCase, activeCase, recovered)
 
-                    tvActive.text = activeCase.toString()
-                    tvTotal.text = totalCase.toString()
-                    tvDeath.text = death.toString()
-                    tvRecovered.text = recovered.toString()
-                    lastUpdate.text = "Terakhir di update : ${TimeAgo.using(it.lastUpdate!!.toLong())}"
+                    tvActive?.text = activeCase.toString()
+                    tvTotal?.text = totalCase.toString()
+                    tvDeath?.text = death.toString()
+                    tvRecovered?.text = recovered.toString()
+                    lastUpdate?.text = "Terakhir di update : ${TimeAgo.using(it.lastUpdate!!.toLong())}"
                 }
             }
         })

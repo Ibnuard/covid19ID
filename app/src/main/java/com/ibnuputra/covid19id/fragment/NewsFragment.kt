@@ -34,7 +34,6 @@ class NewsFragment : Fragment() {
         ApiNews().services.getNews().enqueue(object :
             retrofit2.Callback<NewsModel1> {
             override fun onFailure(call: Call<NewsModel1>, t: Throwable) {
-                Toast.makeText(context, "GAGAL $t", Toast.LENGTH_SHORT).show()
             }
 
             override fun onResponse(call: Call<NewsModel1>, response: Response<NewsModel1>) {

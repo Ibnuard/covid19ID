@@ -12,6 +12,8 @@ class GuideView : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_guide_view)
 
+        val url = intent.getStringExtra("url")
+
         val backBtn: ImageView = findViewById(R.id.backBtn)
         backBtn.setOnClickListener {
             onBackPressed()
@@ -22,6 +24,6 @@ class GuideView : AppCompatActivity() {
         webview.settings.javaScriptEnabled = true
         webview.settings.domStorageEnabled = true
         webview.settings.loadsImagesAutomatically = true
-        webview.loadUrl(Uri.parse("file:///android_asset/test.html").toString())
+        webview.loadUrl(Uri.parse(url).toString())
     }
 }

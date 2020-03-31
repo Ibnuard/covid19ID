@@ -13,36 +13,56 @@
         android:paddingHorizontal="24dp"
         android:orientation="vertical">
         <ImageView
+            android:id="@+id/goBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:src="@drawable/ic_backwhite"/>
         <androidx.cardview.widget.CardView
+            android:id="@+id/coronaGuide"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
             app:cardBackgroundColor="@color/colorPrimary"
             app:cardCornerRadius="10dp"
             app:cardElevation="0dp">
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="64dp">
+                android:layout_height="wrap_content"
+                android:padding="14dp">
                 <ImageView
                     android:id="@+id/tmbndl"
                     android:scaleType="centerCrop"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/corona"/>
-                <TextView
-                    android:layout_toRightOf="@id/tmbndl"
-                    android:layout_centerInParent="true"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Apa itu Corona?"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="14dp"
-                    android:fontFamily="@font/regularnunito"
-                    android:textStyle="bold"
-                    android:paddingHorizontal="14dp"/>
+                    android:layout_toRightOf="@id/tmbndl"
+                    android:paddingHorizontal="20dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Apa itu Corona?"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/regularnunito"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Berisi artikel tentang penegertian virus corona, gejala, dan cara penanganannya."
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/regularnunito"/>
+
+                </LinearLayout>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -54,68 +74,104 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_marginTop="18dp"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/colorPrimary"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="0dp">
-        <RelativeLayout
+            android:id="@+id/sodiGuide"
             android:layout_width="match_parent"
-            android:layout_height="64dp">
-            <ImageView
-                android:id="@+id/tmbndl2"
-                android:scaleType="centerCrop"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/sodi"/>
-            <TextView
-                android:layout_toRightOf="@id/tmbndl2"
-                android:layout_centerInParent="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Social Distance"
-                android:textColor="@color/colorWhite"
-                android:textSize="14dp"
-                android:fontFamily="@font/regularnunito"
-                android:textStyle="bold"
-                android:paddingHorizontal="14dp"/>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_next"
-                android:layout_centerInParent="true"
-                android:layout_alignParentRight="true"
-                android:paddingHorizontal="14dp"/>
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+            android:layout_marginTop="18dp"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="14dp">
+                        <ImageView
+                            android:id="@+id/tmbndl2"
+                            android:scaleType="centerCrop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/sodi"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tmbndl2"
+                        android:paddingHorizontal="20dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Apa itu Social Distance?"
+                            android:layout_marginBottom="4dp"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/regularnunito"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Belakangan ini kita sering mendengar kata Social Distance, Apa sih sebenernya Social Distance itu?"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/regularnunito"/>
+                    </LinearLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_next"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingHorizontal="14dp"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
+            android:id="@+id/tidiGuide"
             android:layout_marginTop="18dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
             app:cardBackgroundColor="@color/colorPrimary"
             app:cardCornerRadius="10dp"
             app:cardElevation="0dp">
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="64dp">
+                android:layout_height="wrap_content"
+                android:padding="14dp">
                 <ImageView
                     android:id="@+id/tmbndl3"
                     android:scaleType="centerCrop"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/tdt"/>
-                <TextView
-                    android:layout_toRightOf="@id/tmbndl3"
-                    android:layout_centerInParent="true"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tips dan Trik"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="14dp"
-                    android:fontFamily="@font/regularnunito"
-                    android:textStyle="bold"
-                    android:paddingHorizontal="14dp"/>
+                    android:layout_toRightOf="@id/tmbndl3"
+                    android:paddingHorizontal="20dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tips dan Trik mengahdapi Corona?"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/regularnunito"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Apa saja sih yang dapat kita lakukan di masa pandemi Corona ini?"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/regularnunito"/>
+                </LinearLayout>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
